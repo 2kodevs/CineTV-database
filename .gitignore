@@ -1,3 +1,7 @@
+# data to ignore
+Cartelera JR 2019/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
