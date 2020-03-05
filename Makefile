@@ -19,6 +19,9 @@ rename: ## Rename the downloaded files
 parse: ## Find ans save important pages
 	@python page_filter.py
 
+install: ## Install dependencies
+	@pip install requierements.txt
+
 help: ## Show this help
 	@echo $(APP_DESCRIPTION)
 	@echo Developed by: $(DEVELOPERS)
