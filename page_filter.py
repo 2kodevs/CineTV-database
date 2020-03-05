@@ -11,15 +11,15 @@ def main(args):
         for page in pdf:
             line = page.split("\n")[0].split()
             if len(line) == 10 and "CARTELERA" in line:
-                with open(f"{args.folder}/{name}-page{idx}.txt", 'w') as fd:
+                with open(f"{args.folder}{name}-page{idx}.data", 'w') as fd:
                     fd.write(page)
     
 if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description='CineTV page filter')
-    parser.add_argument('-p', '--path', type=str, default='Cartelera JR 2019/', help='path of the pdf files')
-    parser.add_argument('-f', '--folder', type=str, default='Cartelera JR 2019/data', help='destination folder')
+    parser.add_argument('-p', '--path', type=str, default='Files/pdf/', help='path of the pdf files')
+    parser.add_argument('-f', '--folder', type=str, default='Files/data/', help='destination folder')
     
     args = parser.parse_args()
     main(args)
