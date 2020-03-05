@@ -16,6 +16,9 @@ download: ## Download data files
 rename: ## Rename the downloaded files
 	@python renamer.py
 
+parse: ## Find ans save important pages
+	@python page_filter.py
+
 help: ## Show this help
 	@echo $(APP_DESCRIPTION)
 	@echo Developed by: $(DEVELOPERS)
