@@ -29,6 +29,9 @@ rename: directories ## Rename the downloaded files
 parse: directories ## Find ans save important pages
 	@python page_filter.py -p $(PDF_PATH) -f $(DATA_PATH)
 
+db: directories ## Build a database with the data
+	@python data_parser.py -p $(DATA_PATH)
+
 install: ## Install dependencies
 	@pip install requierements.txt
 
